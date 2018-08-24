@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Model-parent</artifactId>
+        <groupId>com.qf</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--后台管理:聚合打包方式-->
+    <packaging>pom</packaging>
+    <modules>
+        <module>Model-manager-pojo</module>
+        <module>Model-manager-mapper</module>
+        <module>Model-manager-interface</module>
+        <module>Model-manager-service</module>
+        <module>Model-manager-controller</module>
+    </modules>
+    <artifactId>Model-manager</artifactId>
+
+    <dependencies>
+        <!--将通用包引入到后台管理聚合包中-->
+        <dependency>
+            <groupId>com.qf</groupId>
+            <artifactId>Model-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
