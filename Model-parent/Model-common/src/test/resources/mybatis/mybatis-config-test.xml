@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- myBatis框架设置信息 -->
+    <settings>
+        <!-- 局部Mapper.xml不配置时,默认使用全局配置开关 -->
+        <!-- 表级懒加载		查询一个对象时,其中属性有其他表内容时,是否查询其他表 -->
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <!-- 对象中有多个性值 -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!--日志 -->
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <!-- 起别名,简化Mapper.xml中参数类名书写 -->
+    <typeAliases>
+        <!-- 默认以类名为别名 -->
+        <package name="model"/>
+    </typeAliases>
+
+</configuration>

@@ -14,10 +14,10 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <!--依赖mapper工程-->
+        <!--依赖dao工程-->
         <dependency>
             <groupId>com.qf</groupId>
-            <artifactId>Model-manager-mapper</artifactId>
+            <artifactId>Model-manager-dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <!--依赖interface工程-->

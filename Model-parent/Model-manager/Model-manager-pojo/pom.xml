@@ -11,6 +11,4 @@
     <!--持久类:jar包-->
     <packaging>jar</packaging>
     <artifactId>Model-manager-pojo</artifactId>
-
-
 </project>

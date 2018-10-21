@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="Model-manager-controller:war">
-    <output-path>$PROJECT_DIR$/Model-parent/Model-manager/Model-manager-controller/target</output-path>
-    <root id="archive" name="Model-manager-controller.war">
-      <element id="artifact" artifact-name="Model-manager-controller:war exploded" />
-    </root>
-  </artifact>
-</component>

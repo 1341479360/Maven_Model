@@ -18,7 +18,12 @@
     <modules>
         <module>Model-common</module>
         <module>Model-manager</module>
-        <module>Model-portal</module>
+        <module>Model-protal-web</module>
+        <module>Model-search-web</module>
+        <module>Model-freemarker</module>
+        <module>Model-provider</module>
+        <module>Model-consumer</module>
+        <module>Model-shiro</module>
     </modules>
 
     <!--版本号的统一管理-->
@@ -87,7 +92,7 @@
                 <artifactId>jstl</artifactId>
                 <version>${jstl.version}</version>
             </dependency>
-            <!--fastdfs的java工具类-->
+            <!--fastdfs的java工具类,分布式文件系统-->
             <dependency>
                 <groupId>org.csource</groupId>
                 <artifactId>fastdfs-client-java</artifactId>
@@ -129,6 +134,7 @@
                 <artifactId>ueditor</artifactId>
                 <version>${baidu-ueditor.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
@@ -190,24 +196,28 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
+
             <!--slf4j是日志接口(日志规范)，logback是日志实现-->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
+
             <!--logback的基础模块-->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
                 <version>${logback.core.version}</version>
             </dependency>
+
             <!--slf4j的实现并整合，是log4j的改良版本-->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.classic.version}</version>
             </dependency>
+
             <!-- mybatis包和桥接包-->
             <dependency>
                 <groupId>org.mybatis</groupId>

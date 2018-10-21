@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>Model-manager-pojo</module>
-        <module>Model-manager-mapper</module>
+        <module>Model-manager-dao</module>
         <module>Model-manager-interface</module>
         <module>Model-manager-service</module>
         <module>Model-manager-controller</module>

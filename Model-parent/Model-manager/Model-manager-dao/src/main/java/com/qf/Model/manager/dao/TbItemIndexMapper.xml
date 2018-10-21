@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.Model.manager.dao.TbItemIndexMapper" >
+
+
+    <!--查到的虚拟表字段名进行封装-->
+    <sql id="Base_Column_List" >
+     i.id,i.title, i.sell_point as sellPoint, i.price,
+     i.image, c.name as catName
+    </sql>
+
+
+<!--2   为索引库填充数据进行查询结果集的封装-->
+    <select id="listItemByCondition"  resultType="com.qf.Model.manager.pojo.vo.TbItemIndex">
+
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM tb_item AS i
+        LEFT JOIN tb_item_cat AS c
+        ON i.`cid`=c.`id`
+        WHERE
+        i.status=1
+
+    </select>
+
+
+</mapper>

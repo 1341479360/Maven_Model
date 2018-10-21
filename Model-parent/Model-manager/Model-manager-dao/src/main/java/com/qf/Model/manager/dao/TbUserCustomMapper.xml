@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.Model.manager.dao.TbUserCustomMapper" >
+
+
+    <!--table表内容   表字段名    查到的虚拟表字段名进行封装-->
+    <sql id="Base_Column_List" >
+        u.id,u.username,u.password,u.phone,u.email,u.created,u.updated,u.type,u.status,u.sex,u.address
+
+    </sql>
+    
+    <!--模糊查询条件判断-->
+    <!--条件   1  查询对象不为null(首次访问table)
+    2  空查询 -->
+
+<!--1   查询总条数-->
+    <select id="userCount"  resultType="_long">
+        SELECT
+        COUNT(1)
+        FROM tb_User
+    </select>
+
+<!--2   分页查询-->
+    <select id="listUserByPage"  resultType="com.qf.Model.manager.pojo.po.TbUser">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM tb_user u
+        ORDER BY u.id DESC
+        LIMIT #{page.pageFirstIndex},#{page.limit}
+    </select>
+
+    <update id="changeStatus">
+        UPDATE tb_item
+        SET STATUS = #{tbItem.status}
+        WHERE id=#{tbItem.id}
+    </update>
+</mapper>
